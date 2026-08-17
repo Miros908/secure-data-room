@@ -1,0 +1,7 @@
+node_modules
+.env
+/src/database/generated
+.storage
+.storage-test
+dist
+sdr-r2-check.mjs

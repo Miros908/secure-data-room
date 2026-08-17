@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/* DealBox: navy vault, electric blue, cool paper.
+   Тема на <html>.class dark, не media-query — выбор в theme-store. */
+:root {
+  --bg: #f4f6fb;
+  --surface: #ffffff;
+  --surface-muted: #e8eef8;
+  --fg: #111d32;
+  --muted: #5c6d8a;
+  --border: #c7d1e1;
+  --accent: #2160e8;
+  --accent-strong: #175ce5;
+  --danger: #c62828;
+  --folder: #2e6bff;
+  --pdf: #c62828;
+  --navy: #111d32;
+  --viewer: #0b1220;
+  --viewer-bar: #14213a;
+  --viewer-fg: #f4f7fb;
+  --viewer-muted: #8a9bb8;
+  --header-h: 3.5rem;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #0b1220;
+  --surface: #14213a;
+  --surface-muted: #1b2c4d;
+  --fg: #f4f7fb;
+  --muted: #8a9bb8;
+  --border: #2a3c5c;
+  --accent: #2e6bff;
+  --accent-strong: #4d82ff;
+  --danger: #f07167;
+  --folder: #5b8cff;
+  --pdf: #e07a6a;
+  --navy: #111d32;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-danger: var(--danger);
+  --color-folder: var(--folder);
+  --color-pdf: var(--pdf);
+  --color-navy: var(--navy);
+  --color-viewer: var(--viewer);
+  --color-viewer-bar: var(--viewer-bar);
+  --color-viewer-fg: var(--viewer-fg);
+  --color-viewer-muted: var(--viewer-muted);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-inter);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 0% -20%, rgb(33 96 232 / 0.1), transparent 44%),
+    radial-gradient(ellipse at 100% 0%, rgb(17 29 50 / 0.06), transparent 38%);
+  color: var(--fg);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.dark body {
+  background-image:
+    radial-gradient(ellipse at 8% -18%, rgb(46 107 255 / 0.16), transparent 42%),
+    radial-gradient(ellipse at 100% 0%, rgb(23 92 229 / 0.08), transparent 36%);
+}
+
+.font-display {
+  letter-spacing: -0.03em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

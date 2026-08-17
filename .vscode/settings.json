@@ -1,0 +1,8 @@
+{
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "jest.rootPath": "apps/nestjs-backend",
+  "jest.jestCommandLine": "pnpm exec jest",
+  "jest.virtualFolders": [
+    { "name": "api", "rootPath": "apps/nestjs-backend" }
+  ]
+}

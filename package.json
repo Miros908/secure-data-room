@@ -1,0 +1,19 @@
+{
+  "name": "secure-data-room",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -r --parallel run dev",
+    "start:local": "bash scripts/start.sh",
+    "dev:web": "pnpm --filter web dev",
+    "dev:api": "pnpm --filter api start:dev",
+    "build": "pnpm -r run build",
+    "lint": "pnpm -r run lint",
+    "test": "pnpm --filter @sdr/shared build && pnpm --filter api prisma:generate && pnpm --filter api test && pnpm --filter web test",
+    "test:e2e": "pnpm --filter api test:e2e",
+    "test:e2e:web": "pnpm --filter web test:e2e"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b"
+}

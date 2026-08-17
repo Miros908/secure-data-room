@@ -1,0 +1,36 @@
+node_modules
+.pnpm-store
+dist
+build
+.next
+.next-e2e
+out
+coverage
+*.log
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+!.env.test
+.DS_Store
+.vercel
+*.pem
+apps/nestjs-backend/src/database/generated
+apps/nestjs-backend/.storage
+apps/nestjs-backend/.storage-test
+playwright-report
+playwright/.cache
+test-results
+blob-report
+
+# Take-home spec and notes — local only
+ТЗ.txt
+ТЗ-ru.md
+ТЗ-add.txt
+Дыры.txt
+
+# Agent / editor scaffolding
+AGENTS.md
+**/AGENTS.md
+.cursor/
+apps/nestjs-backend/MODULE_STRUCTURE.md
